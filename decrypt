@@ -1,6 +1,7 @@
 #!/bin/bash
 doubleAlpha=abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+upperAlpha=ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ
 plaintext=$1
 desloc=$2
-ciphertext=`echo $plaintext | tr ${doubleAlpha:0:26} ${doubleAlpha:desloc:26} | rev`
+ciphertext=`echo $plaintext | tr ${upperAlpha:0:26} ${upperAlpha:desloc:26} | rev`
 echo $ciphertext
